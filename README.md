@@ -1,248 +1,196 @@
 <div align="center">
 
-<img src="app/src/main/ic_launcher-playstore.png" alt="Logotipo de PetMatch" width="220">
+<img src="app/src/main/ic_launcher-playstore.png" alt="PetMatch" width="160">
 
 PetMatch
 
 Aplicación Android para la consulta y administración de mascotas
 
-Aplicación móvil nativa desarrollada en Java que permite registrar usuarios, consultar mascotas y administrar operadores, contenido multimedia y reportes mediante servicios web PHP.
+Cliente móvil nativo conectado a servicios web PHP para gestionar usuarios, mascotas, contenido multimedia y reportes.
 
+<br>
 
+<img src="https://img.shields.io/badge/Android-API_28%2B-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android API 28+">
+<img src="https://img.shields.io/badge/Java-11-ED8B00?style=flat-square&logo=openjdk&logoColor=white" alt="Java 11">
+<img src="https://img.shields.io/badge/Gradle-8.11.1-02303A?style=flat-square&logo=gradle&logoColor=white" alt="Gradle 8.11.1">
+<img src="https://img.shields.io/badge/Android_Studio-3DDC84?style=flat-square&logo=androidstudio&logoColor=white" alt="Android Studio">
+<img src="https://img.shields.io/badge/API-PHP-777BB4?style=flat-square&logo=php&logoColor=white" alt="API PHP">
 
+<br><br>
 
-
-
+Descripción ·
+Funcionalidades ·
+Arquitectura ·
+Instalación ·
+Servicios ·
+Estado
 
 </div>
 
-Descripción
+📖 Descripción
 
-PetMatch es una aplicación Android orientada a la publicación, consulta y administración de información sobre mascotas. La aplicación se comunica por Internet con un conjunto de servicios PHP para autenticar usuarios, verificar registros por correo, consultar datos y cargar imágenes o videos.
+PetMatch es una aplicación Android orientada al registro, consulta y administración de información sobre mascotas. Se comunica por Internet con servicios PHP para autenticar usuarios, verificar registros por correo, consultar información y cargar imágenes o videos.
 
-El sistema diferencia tres niveles de acceso: administrador, operador y usuario. Después del inicio de sesión, cada persona es dirigida automáticamente a la interfaz correspondiente a su nivel.
+Después del inicio de sesión, la aplicación dirige a cada persona hacia una interfaz diferente según su nivel de acceso.
 
-El nombre del proyecto hace referencia a PetMatch, pero el código disponible se concentra actualmente en el registro, búsqueda, visualización y administración de mascotas. No se encontró un flujo implementado para solicitudes de adopción, emparejamiento entre mascotas, mensajería o seguimiento de adopciones.
+Aplicación
 
-Funcionalidades
-
-Acceso y registro
-
-Pantalla inicial y acceso al formulario de inicio de sesión.
-
-Autenticación mediante nombre de usuario y contraseña.
-
-Registro de nuevos usuarios.
-
-Validación de datos obligatorios y formato del correo electrónico.
-
-Generación y envío de un código de verificación por correo.
-
-Comprobación del código antes de completar el registro.
-
-Reenvío del código y posibilidad de corregir el correo.
-
-Conservación de la sesión mediante SharedPreferences.
-
-Redirección automática según el nivel de acceso.
-
-Cierre de sesión y eliminación de los datos locales de la sesión.
-
-Usuario
-
-Consulta del listado de mascotas disponibles.
-
-Búsqueda de mascotas mediante texto.
-
-Visualización de nombre, raza, edad, género e imagen.
-
-Acceso a una ficha con información detallada de la mascota.
-
-Reproducción del video asociado dentro de un WebView.
-
-Consulta de los datos del perfil autenticado.
-
-Sección «Acerca de nosotros» y créditos del proyecto.
-
-Operador
-
-Registro de mascotas con:
-
-nombre;
-
-especie;
-
-género;
-
-raza;
-
-edad;
-
-descripción;
-
-estado;
-
-fecha de ingreso;
-
-imagen;
-
-video;
-
-responsable del registro.
-
-Selección de imágenes y videos desde el dispositivo.
-
-Carga de archivos multimedia al servidor mediante solicitudes multipart/form-data.
-
-Búsqueda y listado de mascotas registradas.
-
-Actualización de datos, imagen y video.
-
-Eliminación de mascotas con confirmación previa.
-
-Consulta del reporte de mascotas dentro de un WebView.
-
-Administrador
-
-Acceso a todas las opciones de gestión de mascotas.
-
-Registro de nuevos operadores.
-
-Búsqueda y consulta de operadores.
-
-Actualización de nombres, apellidos, correo, usuario y contraseña de operadores.
-
-Eliminación de operadores con confirmación.
-
-Consulta de reportes de mascotas.
-
-Consulta de reportes de usuarios.
-
-Navegación mediante barra inferior entre los módulos administrativos.
-
-Tecnologías utilizadas
-
-Área
-
-Tecnología
-
-Uso en el proyecto
+Configuración
 
 Plataforma
 
 Android nativo
 
-Ejecución de la aplicación móvil
-
 Lenguaje
 
 Java 11
 
-Actividades, fragmentos, adaptadores y lógica de negocio
+Android mínimo
 
-SDK
+Android 9 — API 28
 
-Compile/Target SDK 35
+SDK de compilación
 
-Compilación y compatibilidad con Android 15
+API 35
 
-Compatibilidad
+Perfiles
 
-Min SDK 28
+Administrador, operador y usuario
 
-Android 9 o superior
+Backend
 
-Interfaz
+Servicios web PHP externos
 
-XML, Material Components y ConstraintLayout
+Alcance actual: el código permite registrar, buscar, visualizar y administrar mascotas. No se encontró un flujo implementado para adopciones, emparejamiento, mensajería o seguimiento de solicitudes.
+
+✨ Funcionalidades
+
+Acceso y registro
+
+Inicio de sesión con nombre de usuario y contraseña.
+
+Registro de nuevos usuarios con validación de datos.
+
+Generación, envío, verificación y reenvío de códigos por correo.
+
+Corrección del correo antes de completar el registro.
+
+Sesión local mediante SharedPreferences.
+
+Redirección automática según el nivel de acceso.
+
+Cierre de sesión y limpieza de los datos locales.
+
+Funciones por perfil
+
+Perfil
+
+Funciones principales
+
+Usuario
+
+Buscar mascotas, consultar información general, abrir fichas detalladas, visualizar imágenes y reproducir videos. También puede consultar su perfil y la sección «Acerca de nosotros».
+
+Operador
+
+Registrar, buscar, actualizar y eliminar mascotas. Puede seleccionar y cargar imágenes y videos, además de consultar el reporte de mascotas.
+
+Administrador
+
+Gestionar mascotas y operadores, modificar o eliminar cuentas de operadores y consultar reportes de mascotas y usuarios.
+
+Información registrada de una mascota
+
+Nombre · Especie · Género · Raza · Edad · Descripción · Estado · Fecha de ingreso · Imagen · Video · Responsable
+
+🧰 Stack tecnológico
+
+Tecnología
+
+Función dentro del proyecto
+
+Java 11
+
+Actividades, fragmentos, adaptadores y lógica de la aplicación
+
+XML + Material Components
 
 Construcción de pantallas y navegación
 
-Enlace de vistas
-
 View Binding
 
-Acceso seguro a los componentes XML
-
-Red
+Acceso a los componentes definidos en XML
 
 Volley 1.2.1
 
-Solicitudes GET/POST y procesamiento de JSON
-
-Imágenes
+Peticiones GET/POST y procesamiento de JSON
 
 Glide 4.16.0
 
 Descarga y presentación de imágenes remotas
 
-Contenido web
-
 WebView
 
-Videos y reportes generados por el servidor
-
-Sesión local
+Reproducción de videos y presentación de reportes
 
 SharedPreferences
 
-Datos del usuario, nivel y estado de autenticación
+Conservación de la sesión y datos del usuario
 
-Backend consumido
+PHP
 
-Servicios PHP
+Servicios externos de autenticación, CRUD y archivos
 
-Autenticación, registros, CRUD, archivos y reportes
+Gradle 8.11.1
 
-Construcción
+Dependencias, compilación y generación del APK
 
-Gradle 8.11.1 y AGP 8.10.1
+Android Gradle Plugin 8.10.1
 
-Gestión de dependencias y generación del APK
+Configuración del módulo Android
 
-Arquitectura general
+🏗️ Arquitectura
 
-El repositorio contiene el cliente Android. La aplicación organiza sus pantallas mediante actividades y fragmentos, utiliza adaptadores para presentar listas y delega la persistencia principal a servicios web PHP externos.
+El repositorio contiene únicamente el cliente Android. La aplicación utiliza actividades como contenedores, fragmentos para cada módulo, adaptadores para las listas y servicios PHP externos para la persistencia.
+
+flowchart LR
+    U["Usuario"] --> APP["Aplicación Android"]
+    APP --> NET["Volley y HTTP"]
+    NET --> API["Servicios PHP"]
+    API --> DATA["JSON, archivos y reportes"]
+    DATA --> APP
+
+Flujo de acceso
+
+flowchart TD
+    LOGIN["Inicio de sesión"] --> ROLE{"Nivel recibido"}
+    ROLE -->|admin| ADMIN["Gestión completa"]
+    ROLE -->|operador| OP["Gestión de mascotas"]
+    ROLE -->|usuario| USER["Consulta de mascotas"]
+
+Organización del código
 
 app/src/main/
-├── AndroidManifest.xml        # Permisos y actividades
-├── java/.../
-│   ├── MainActivity*.java     # Inicio, autenticación y contenedores de navegación
-│   ├── *Adapter*.java         # Listas de mascotas y operadores
-│   ├── URL.java               # Dirección base de algunos servicios
-│   ├── vistas/                # Módulos de administrador y operador
-│   └── vistasusuarios/        # Inicio, detalle, perfil y créditos
+├── AndroidManifest.xml
+├── java/com/example/proyectoinvestigacion/
+│   ├── MainActivity*.java
+│   ├── *Adapter*.java
+│   ├── URL.java
+│   ├── vistas/
+│   └── vistasusuarios/
 └── res/
-    ├── layout/                # Interfaces XML
-    ├── menu/                  # Menús de navegación
-    ├── drawable/              # Imágenes e iconos
-    └── values/                # Colores, textos y temas
+    ├── drawable/
+    ├── layout/
+    ├── menu/
+    └── values/
 
-Flujo general de comunicación:
+🔄 Datos intercambiados
 
-flowchart TD
-    A[Aplicación Android] --> B[Volley o HttpURLConnection]
-    B --> C[Servicios PHP]
-    C --> D[Datos JSON o texto]
-    C --> E[Imágenes, videos y reportes]
-    D --> A
-    E --> A
-
-Flujo de acceso por nivel:
-
-flowchart TD
-    A[Inicio de sesión] --> B{Nivel recibido}
-    B -->|admin| C[Gestión completa]
-    B -->|operador| D[Gestión de mascotas]
-    B -->|usuario| E[Consulta de mascotas]
-
-Datos manejados por el cliente
-
-El código del backend y el esquema de su base de datos no están incluidos en este repositorio. No obstante, el cliente permite identificar los siguientes datos intercambiados con la API:
+El backend y el esquema de la base de datos no están incluidos. Los siguientes campos fueron identificados en las solicitudes y respuestas del cliente:
 
 Recurso
 
-Campos utilizados por la aplicación
+Campos utilizados
 
 Usuario
 
@@ -258,149 +206,30 @@ nombre
 
 Verificación
 
-correo y código temporal
+Correo electrónico y código temporal
 
-Los nombres exactos de algunos campos cambian entre respuestas, por ejemplo idMascota e idmascota. Cualquier backend compatible debe respetar los nombres que espera cada pantalla.
+Algunos nombres cambian entre respuestas, por ejemplo idMascota e idmascota. Un backend compatible debe respetar el formato esperado por cada pantalla.
 
-Servicios web consumidos
-
-Servicio
-
-Método observado
-
-Propósito
-
-validar_usuarios.php
-
-POST
-
-Validar credenciales y devolver el nivel del usuario
-
-generarcodigo.php
-
-POST
-
-Generar y enviar el código de verificación
-
-verificar_codigo.php
-
-POST
-
-Comprobar el código recibido
-
-registrar_usuario.php
-
-POST
-
-Completar el registro del usuario
-
-listar_inicio_mascotas.php
-
-GET
-
-Presentar y buscar mascotas para el usuario
-
-detalles_mascota.php
-
-GET
-
-Consultar la ficha completa de una mascota
-
-listar_especie.php
-
-GET
-
-Obtener las especies disponibles
-
-insertar_mascota.php
-
-POST
-
-Registrar una mascota
-
-listar_mascotas.php
-
-GET
-
-Buscar mascotas para su administración
-
-actualizar_mascota.php
-
-POST
-
-Modificar los datos de una mascota
-
-eliminar_mascota.php
-
-POST
-
-Eliminar una mascota
-
-subir_imagen.php
-
-POST multipart
-
-Almacenar una imagen en el servidor
-
-subir_video.php
-
-POST multipart
-
-Almacenar un video en el servidor
-
-insertar_operador.php
-
-POST
-
-Registrar un operador
-
-listar_operador.php
-
-GET
-
-Buscar operadores
-
-actualizar_operador.php
-
-POST
-
-Modificar un operador
-
-eliminar_operador.php
-
-POST
-
-Eliminar un operador
-
-reporte_mascota.php
-
-WebView
-
-Mostrar el reporte de mascotas
-
-reporte_usuarios.php
-
-WebView
-
-Mostrar el reporte de usuarios
+🚀 Instalación
 
 Requisitos
 
-Android Studio con soporte para proyectos Java.
+Android Studio.
 
 JDK 17 para ejecutar Android Gradle Plugin 8.10.1.
 
-Android SDK 35 instalado.
+Android SDK 35.
 
-Dispositivo físico o emulador con Android 9 (API 28) o superior.
+Dispositivo o emulador con Android 9 — API 28 o superior.
 
 Conexión a Internet.
 
-Acceso a un backend PHP compatible con los servicios enumerados.
+Backend PHP compatible y disponible.
 
-Aunque el código fuente se compila con compatibilidad Java 11, la versión del Android Gradle Plugin utilizada requiere ejecutar Gradle con JDK 17.
+El código fuente utiliza compatibilidad Java 11, pero Gradle debe ejecutarse con JDK 17 debido a la versión del complemento de Android.
 
-Instalación y ejecución
+<details>
+<summary><strong>Ver instalación paso a paso</strong></summary>
 
 1. Clonar el repositorio
 
@@ -415,17 +244,17 @@ Seleccionar Open.
 
 Elegir la carpeta Pet_Match_app.
 
-Esperar a que finalice la sincronización de Gradle.
+Esperar la sincronización de Gradle.
 
-Confirmar que el proyecto utiliza JDK 17 en la configuración de Gradle.
+Confirmar que Gradle utiliza JDK 17.
 
-3. Comprobar la conexión con el backend
+3. Verificar el backend
 
-La dirección principal se encuentra en:
+La dirección base de varios servicios se encuentra en:
 
 app/src/main/java/com/example/proyectoinvestigacion/URL.java
 
-Algunas pantallas también conservan direcciones completas directamente en el código:
+También existen direcciones completas en:
 
 vistas/modificarmascotasFragment.java;
 
@@ -433,59 +262,222 @@ vistas/modificarOperadoresFragment.java;
 
 vistasusuarios/inicioUsuarioFragment.java.
 
-Antes de ejecutar la aplicación se debe confirmar que el servidor y todos los scripts PHP se encuentran disponibles. Si se utiliza otro servidor, hay que actualizar tanto URL.java como las direcciones completas anteriores.
+Si cambia el servidor, deben actualizarse esas direcciones junto con URL.java.
 
-El backend PHP y su base de datos no forman parte de este repositorio. Sin esos servicios, las pantallas locales pueden abrirse, pero el inicio de sesión, registro, consultas, cargas y modificaciones no funcionarán.
+4. Ejecutar
 
-4. Ejecutar en Android Studio
-
-Crear o iniciar un emulador con API 28 o superior, o conectar un dispositivo con depuración USB.
+Iniciar un emulador o conectar un dispositivo con depuración USB.
 
 Seleccionar el módulo app.
 
 Presionar Run app.
 
-La aplicación solicita únicamente el permiso de Internet en el manifiesto. La selección de imágenes y videos utiliza el selector de documentos del sistema.
+</details>
 
 Compilación por consola
 
-En Windows:
+Sistema
+
+Comando
+
+Windows
 
 .\gradlew.bat assembleDebug
 
-En Linux o macOS:
+Linux/macOS
 
 bash gradlew assembleDebug
 
-El APK de depuración se genera normalmente en:
+El APK se genera normalmente en:
 
 app/build/outputs/apk/debug/app-debug.apk
 
-Para generar una versión de publicación:
+El backend PHP y su base de datos no forman parte del repositorio. Sin ellos, las operaciones de inicio de sesión, registro, consulta y administración no estarán disponibles.
 
-.\gradlew.bat assembleRelease
+🌐 Servicios web
 
-La configuración actual no incluye una firma de producción. Para distribuir la aplicación se debe crear un keystore y configurar la firma de la variante release.
+<details>
+<summary><strong>Ver endpoints consumidos por la aplicación</strong></summary>
 
-Seguridad implementada
+Grupo
 
-Uso de HTTPS en la dirección actual de los servicios.
+Servicio
 
-Verificación del correo mediante un código antes del registro.
+Método
+
+Propósito
+
+Acceso
+
+validar_usuarios.php
+
+POST
+
+Validar credenciales y obtener el nivel
+
+Acceso
+
+generarcodigo.php
+
+POST
+
+Enviar el código de verificación
+
+Acceso
+
+verificar_codigo.php
+
+POST
+
+Comprobar el código recibido
+
+Acceso
+
+registrar_usuario.php
+
+POST
+
+Registrar al usuario
+
+Mascotas
+
+listar_inicio_mascotas.php
+
+GET
+
+Mostrar y buscar mascotas
+
+Mascotas
+
+detalles_mascota.php
+
+GET
+
+Consultar la ficha completa
+
+Mascotas
+
+listar_especie.php
+
+GET
+
+Obtener las especies
+
+Mascotas
+
+insertar_mascota.php
+
+POST
+
+Registrar una mascota
+
+Mascotas
+
+listar_mascotas.php
+
+GET
+
+Buscar mascotas para administrarlas
+
+Mascotas
+
+actualizar_mascota.php
+
+POST
+
+Modificar una mascota
+
+Mascotas
+
+eliminar_mascota.php
+
+POST
+
+Eliminar una mascota
+
+Archivos
+
+subir_imagen.php
+
+POST
+
+Cargar una imagen
+
+Archivos
+
+subir_video.php
+
+POST
+
+Cargar un video
+
+Operadores
+
+insertar_operador.php
+
+POST
+
+Registrar un operador
+
+Operadores
+
+listar_operador.php
+
+GET
+
+Buscar operadores
+
+Operadores
+
+actualizar_operador.php
+
+POST
+
+Modificar un operador
+
+Operadores
+
+eliminar_operador.php
+
+POST
+
+Eliminar un operador
+
+Reportes
+
+reporte_mascota.php
+
+WebView
+
+Mostrar el reporte de mascotas
+
+Reportes
+
+reporte_usuarios.php
+
+WebView
+
+Mostrar el reporte de usuarios
+
+Las imágenes y los videos se transfieren mediante solicitudes multipart/form-data.
+
+</details>
+
+🔐 Seguridad
+
+Uso de HTTPS en la dirección configurada actualmente.
+
+Verificación del correo mediante código antes del registro.
 
 Validación local de campos obligatorios y formato del correo.
 
-Separación visual y funcional según el nivel recibido desde el servidor.
+Separación de interfaces según el nivel recibido.
 
-Persistencia del estado de inicio de sesión en almacenamiento privado de la aplicación.
+Almacenamiento de la sesión dentro de las preferencias privadas de la aplicación.
 
-Limpieza de los datos de sesión al cerrar sesión.
+Limpieza de la sesión al cerrarla.
 
-Confirmaciones antes de eliminar mascotas u operadores.
+Confirmación previa para operaciones de eliminación.
 
-La autenticación y autorización definitivas deben validarse siempre en el servidor. El cliente móvil no debe considerarse una barrera de seguridad porque sus controles pueden ser modificados o evitados.
-
-
-
-
+La autenticación y la autorización definitivas deben validarse en el servidor. Los controles de la aplicación móvil no deben considerarse por sí solos una barrera de seguridad.
 
