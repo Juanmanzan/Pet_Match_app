@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout7"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffc97d"
+    tools:context=".vistasusuarios.detallesAdicionalesFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="24dp"
+            android:divider="@android:color/transparent"
+            android:showDividers="middle"
+            android:dividerPadding="16dp">
+            ->
+            <ImageView
+                android:id="@+id/imagenDetalles"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="16dp"
+                android:padding="4dp"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/NombreDetalles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="#ffdda3"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="Luna"
+                android:textColor="#4A2E0F"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!-- Raza -->
+            <TextView
+                android:id="@+id/Razadetalles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="#ffdda3"
+                android:padding="14dp"
+                android:text="🐾 Raza: Labrador"
+                android:textColor="#4A2E0F"
+                android:textSize="18sp" />
+
+            <!-- Género -->
+            <TextView
+                android:id="@+id/GeneroDetalles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="#ffdda3"
+                android:padding="14dp"
+                android:text="♀ Género: Hembra"
+                android:textColor="#4A2E0F"
+                android:textSize="18sp" />
+
+            <!-- Edad -->
+            <TextView
+                android:id="@+id/EdadDetalles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="#ffdda3"
+                android:padding="14dp"
+                android:text="🎂 Edad: 2 años"
+                android:textColor="#4A2E0F"
+                android:textSize="18sp" />
+
+            <!-- Descripción -->
+            <TextView
+                android:id="@+id/DescipcionDetalles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="#ffdda3"
+                android:lineSpacingExtra="4dp"
+                android:padding="14dp"
+                android:text="Luna es una perra grande y amigable que disfruta jugar y estar al aire libre."
+                android:textColor="#3B2B1B"
+                android:textSize="17sp" />
+
+            <!-- Botón -->
+            <Button
+                android:id="@+id/VerVideoDetalles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="32dp"
+                android:backgroundTint="#f8790e"
+                android:elevation="4dp"
+                android:paddingHorizontal="36dp"
+                android:paddingVertical="14dp"
+                android:text=" Ver video"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:icon="@drawable/e728e4f3_0646_4be8_9307_8af3acfeef6e"
+                app:iconTint="@null" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

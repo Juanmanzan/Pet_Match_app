@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/crearMascotas"
+        android:icon="@drawable/nuevamascota"
+        android:title="Mascota" />
+    <item
+        android:id="@+id/crearOperador"
+        android:icon="@drawable/nuevooperador"
+        android:title="Operador" />
+    <item
+        android:id="@+id/verReportesMascotas"
+        android:icon="@drawable/reportemascotas"
+        android:title="Reporte Mascotas" />
+    <item
+        android:id="@+id/verReportesUsuarios"
+        android:icon="@drawable/reporteusuarios"
+        android:title="Reporte Usuarios" />
+</menu>

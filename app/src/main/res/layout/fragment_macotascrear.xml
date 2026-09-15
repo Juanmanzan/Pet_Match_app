@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffce81"
+    tools:context=".vistas.MacotascrearFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/nombre"
+                android:layout_width="0dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="#ffdda3"
+                android:digits="qwertyuiopasdfghjklñzxcvbnmQWERTYUIOPASDFGHJKLÑZXCVBNM áéúíó."
+                android:ems="10"
+                android:hint="Nombre"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/modificaridbutton" />
+
+            <EditText
+                android:id="@+id/descripcionid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:background="#ffdda3"
+                android:ems="10"
+                android:hint="Descripcion"
+                android:inputType="text|textMultiLine"
+                android:maxLines="20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+
+            <EditText
+                android:id="@+id/estadoid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:background="#ffdda3"
+                android:digits="qwertyuiopasdfghjklñzxcvbnmQWERTYUIOPASDFGHJKLÑZXCVBNM áéúíó."
+                android:ems="10"
+                android:hint="Estado"
+                android:inputType="text|textMultiLine"
+                android:maxLines="20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descripcionid" />
+
+            <Spinner
+                android:id="@+id/spinnerGenero"
+                android:layout_width="174dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:background="#ffdda3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/spinnerEspecie"
+                app:layout_constraintTop_toBottomOf="@+id/nombre" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/hello_blank_fragment"
+                android:visibility="gone"
+                tools:layout_editor_absoluteX="1dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <Spinner
+                android:id="@+id/spinnerEspecie"
+                android:layout_width="170dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:background="#ffdda3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nombre" />
+
+            <EditText
+                android:id="@+id/editTextNumber"
+                android:layout_width="0dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:background="#ffdda3"
+                android:ems="10"
+                android:hint="Edad"
+                android:inputType="number"
+                android:maxLength="2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/razaid" />
+
+            <EditText
+                android:id="@+id/razaid"
+                android:layout_width="0dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:background="#ffdda3"
+                android:digits="qwertyuiopasdfghjklñzxcvbnmQWERTYUIOPASDFGHJKLÑZXCVBNM áéúíó."
+                android:ems="10"
+                android:hint="Raza"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerGenero" />
+
+            <ImageButton
+                android:id="@+id/botonimagenid"
+                android:layout_width="150dp"
+                android:layout_height="121dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                android:background="#ffb950"
+                android:scaleType="fitCenter"
+                android:src="@drawable/rutaimagen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fechaingresoid" />
+
+            <ImageButton
+                android:id="@+id/botonvideoid"
+                android:layout_width="150dp"
+                android:layout_height="121dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="25dp"
+                android:background="#ffb950"
+                android:scaleType="fitCenter"
+                android:src="@drawable/rutavideo"
+                app:layout_constraintStart_toEndOf="@+id/botonimagenid"
+                app:layout_constraintTop_toBottomOf="@+id/vistaingresoid" />
+
+            <Button
+                android:id="@+id/fechaingresoid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="#f8790e"
+                android:text="Fecha Ingreso"
+                app:icon="@drawable/reloj"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/estadoid" />
+
+            <Button
+                android:id="@+id/botoncrearmascotaid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="23dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginBottom="23dp"
+                android:backgroundTint="#f8790e"
+                android:text="Registrar"
+                app:icon="@drawable/crear"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/videoViewid" />
+
+            <ImageView
+                android:id="@+id/imagenvistaid"
+                android:layout_width="384dp"
+                android:layout_height="223dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="16dp"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/videoViewid"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/botonimagenid"
+                tools:src="@tools:sample/avatars" />
+
+            <VideoView
+                android:id="@+id/videoViewid"
+                android:layout_width="383dp"
+                android:layout_height="270dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="14dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imagenvistaid" />
+
+            <Button
+                android:id="@+id/modificaridbutton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:text="Modificar"
+                app:icon="@drawable/update"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/vistaingresoid"
+                android:layout_width="166dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="33dp"
+                android:background="#ffdda3"
+                android:ems="10"
+                android:enabled="false"
+                android:hint="dd/mm/yyy"
+                android:inputType="text"
+                app:layout_constraintStart_toEndOf="@+id/fechaingresoid"
+                app:layout_constraintTop_toBottomOf="@+id/estadoid" />
+
+            <TextView
+                android:id="@+id/usuarioBien"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                android:text="Bienvenido: Juan"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/Nav_creareditarMascotas"
+        android:icon="@drawable/prueba"
+        android:title="Mascotas" />
+    <item
+        android:id="@+id/nav_tablaMascotas"
+        android:icon="@drawable/prueba"
+        android:title="Reporte Mascotas" />
+</menu>
